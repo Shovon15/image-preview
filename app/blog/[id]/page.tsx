@@ -1,38 +1,60 @@
-import Image from "next/image";
-import React from "react";
-
+import { SITE_URL } from "@/config";
 import { Metadata } from "next";
+
+// async function getMetaData() {
+//   const res = await fetch(SITE_URL + "/api/page/blog", {
+//     cache: "no-store",
+//   });
+
+//   return res;
+// }
 
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  //   const post = await getPost(params.slug)
+  const ogImageUrl = `${SITE_URL}/api/page/blog`;
 
   return {
     title: "This is a static title",
     description: "This is a static description.",
+
     openGraph: {
       title: "This is a static title",
       description: "This is a static description.",
       type: "article",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: "Blog Open Graph Image",
+        },
+      ],
     },
+
     twitter: {
       card: "summary_large_image",
       title: "This is a static title",
       description: "This is a static description.",
+      images: [ogImageUrl],
     },
   };
 }
 
-const page = () => {
+const page = async () => {
+  // const data = await getMetaData();
+  // console.log(data, "Data");
   return (
     <div className="flex flex-col items-center gap-10 px-10">
-      <p className="text-4xl font-bold text-center pt-10">Blog Page!</p>
-      <Image
-        src="/assets/city_lights.jpg"
+      <p className="text-4xl font-bold text-center pt-10">Blog Pages</p>
+      <img
+        // src="https://image-preview-lac.vercel.app/assets/city_lights.jpg"
+        src={SITE_URL + "/api/page/blog"}
+        // src={data.url}
         alt="blog"
+        // fill
         width={1200}
         height={1200}
       />
