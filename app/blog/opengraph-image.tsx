@@ -26,7 +26,10 @@ export default async function OpenGraphImage({
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+          backgroundImage: `url(${new URL(
+            "/assets/city_lights.jpg",
+            "https://image-preview-lac.vercel.app",
+          )})`,
           color: "white",
           fontFamily: "Inter",
         }}
@@ -39,7 +42,7 @@ export default async function OpenGraphImage({
             marginBottom: 20,
           }}
         >
-          {"post.title"}
+          {"This is a sample blog post title"}
         </h1>
 
         <p
@@ -49,7 +52,9 @@ export default async function OpenGraphImage({
             maxWidth: "80%",
           }}
         >
-          {"post.excerpt || post.description"}
+          {
+            "This is a sample excerpt for the blog post used for the Open Graph image."
+          }
         </p>
       </div>
     ),
