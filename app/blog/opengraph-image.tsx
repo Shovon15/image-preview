@@ -34,9 +34,10 @@ export default async function OpenGraphImage({
             "https://image-preview-lac.vercel.app",
             // "http://localhost:3000",
           )})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundSize: "fit",
+          backgroundPosition: "100% 100%",
           backgroundRepeat: "no-repeat",
+          //   border: "10px solid red",
         }}
       >
         <h1
