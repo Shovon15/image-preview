@@ -26,12 +26,17 @@ export default async function OpenGraphImage({
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
+          color: "white",
+          fontFamily: "Inter",
+
           backgroundImage: `url(${new URL(
             "/assets/city_lights.jpg",
             "https://image-preview-lac.vercel.app",
+            // "http://localhost:3000",
           )})`,
-          color: "white",
-          fontFamily: "Inter",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <h1
@@ -40,6 +45,7 @@ export default async function OpenGraphImage({
             fontWeight: 800,
             lineHeight: 1.2,
             marginBottom: 20,
+            color: "yellow",
           }}
         >
           {"This is a sample blog post title"}

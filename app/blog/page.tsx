@@ -11,17 +11,17 @@ export async function generateMetadata({
   //   const post = await getPost(params.slug)
 
   return {
-    title: "post.title",
-    description: "post.excerpt",
+    title: "This is a static title",
+    description: "This is a static description.",
     openGraph: {
-      title: "post.title",
-      description: "post.excerpt",
+      title: "This is a static title",
+      description: "This is a static description.",
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: "post.title",
-      description: "post.excerpt",
+      title: "This is a static title",
+      description: "This is a static description.",
     },
   };
 }
