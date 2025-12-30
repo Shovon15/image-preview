@@ -32,15 +32,15 @@ import Link from "next/link";
 const Home = async () => {
   // const data = await getHello();
   // console.log("data", data);
+
   return (
     <div className="flex flex-col items-center gap-10 px-10">
       <p className="text-4xl font-bold text-center pt-10">Hello world!</p>
       <Link href="/blog">
         <button className="cursor-pointer border  px-4 py-1 rounded-md font-medium">
-          Blog
+          See All Blogs
         </button>
       </Link>
-      {/* <p>{data.message}</p> */}
     </div>
   );
 };
