@@ -8,8 +8,8 @@ cloudinary.config({
 
 export default cloudinary;
 
-console.log({
-  cloud: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  key: !!process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
-  secret: !!process.env.CLOUDINARY_API_SECRET,
-});
+// console.log({
+//   cloud: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+//   key: !!process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+//   secret: !!process.env.CLOUDINARY_API_SECRET,
+// });

@@ -43,7 +43,7 @@ const SingleBlogPage = () => {
         throw new Error(data?.error || "Upload failed");
       }
 
-      console.log("Uploaded:", data);
+      // console.log("Uploaded:", data);
 
       // share after upload success
       await shareContent();
@@ -64,7 +64,7 @@ const SingleBlogPage = () => {
           url: `${SITE_URL}/blog/${id}`,
           // text: "Check out this content!",
         });
-        console.log("Content shared successfully");
+        // console.log("Content shared successfully");
       } catch (error) {
         console.error("Error sharing:", error);
       }
